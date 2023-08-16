@@ -18,22 +18,48 @@
             <div class="grid lg:grid-cols-3 gap-4 w-9/12 mx-auto text-white">
                 <div class="bg-green-600 p-8 rounded-xl">
                     <h4 class="text-3xl font-bold pb-5">Deposit</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
                 </div>
 
                 <div class="bg-yellow-600 p-8 rounded-xl">
                     <h4 class="text-3xl font-bold pb-5">Withdraw</h4>
-                    <h2 class="text-5xl ">$00</h2>
+                    <h2 class="text-5xl">$<span id="withdraw-total"></span></h2>
                 </div>
 
                 <div class="bg-violet-600 p-8 rounded-xl">
                     <h4 class="text-3xl font-bold pb-5">Balance</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h2 class="text-5xl">$<span id="balance-total">00</span></h2>
                 </div>
 
             </div>
         </section>
+        <!-- Deposit and withdraw -->
+        <section>
+            <div class="grid lg:grid-cols-2 gap-4 w-9/12 mx-auto text-white mt-5">
+                <div class="bg-fuchsia-600 p-8 rounded-xl">
+                    <h4 class="text-3xl font-bold pb-5">Please Deposit</h4>
+
+                    <input id="deposit-field" class="w-9/12 block mb-3 px-3 text-blue-400" type="text"
+                        placeholder="§ Amount you want to deposite">
+                    <button id="btn-deposit"
+                        class="bg-amber-500 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Submit</button>
+                </div>
+
+                <div class="bg-sky-600 p-8 rounded-xl">
+                    <h4 class="text-3xl font-bold pb-5">Please Withdraw</h4>
+                    <input id="withdraw-field" class="w-9/12 block mb-3 px-3 text-blue-400" type="text"
+                        placeholder="§ Amount you want to withdraw">
+                    <button id="btn-withdraw"
+                        class="bg-amber-500 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Submit</button>
+                </div>
+
+
+
+            </div>
+        </section>
     </main>
+
+    <script src="js/deposit.js"></script>
 </body>
 
 </html>
