@@ -16,7 +16,7 @@ document.getElementById('btn-submit').addEventListener('click', function () {
 
     // step 4- verify email and password and check whether valid user or not
 
-    if (email === 'demo' && password === 'demo') {
+    if (email === 'demo' && password === '1234') {
         window.location.href = 'bank.html';
     }
     else { alert('Your input is not valid') };
