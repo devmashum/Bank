@@ -16,7 +16,7 @@ document.getElementById('btn-submit').addEventListener('click', function () {
 
     // step 4- verify email and password and check whether valid user or not
 
-    if (email === 'faisal@mashum.com' && password === '11062016') {
+    if (email === 'demo' && password === 'demo') {
         window.location.href = 'bank.html';
     }
     else { alert('Your input is not valid') };
