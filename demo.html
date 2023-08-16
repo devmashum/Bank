@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Operations</title>
+</head>
+
+<body>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button id="doubleButton">Double</button>
+    <button id="tripleButton">Triple</button>
+
+    <div id="result"></div>
+
+    <script>
+        const doubleButton = document.getElementById("doubleButton");
+        const tripleButton = document.getElementById("tripleButton");
+        const numberInput = document.getElementById("numberInput");
+        const resultDiv = document.getElementById("result");
+
+        doubleButton.addEventListener("click", function () {
+            const inputValue = parseFloat(numberInput.value);
+            if (!isNaN(inputValue)) {
+                const doubledValue = inputValue * 2;
+                resultDiv.textContent = `Double: ${doubledValue}`;
+            } else {
+                alert("Please enter a number");
+            }
+        });
+
+        tripleButton.addEventListener("click", function () {
+            const inputValue = parseFloat(numberInput.value);
+            if (!isNaN(inputValue)) {
+                const tripledValue = inputValue * 3;
+                resultDiv.textContent = `Triple: ${tripledValue}`;
+            } else {
+                alert("Please enter a number");
+            }
+        });
+    </script>
+</body>
+
+</html>

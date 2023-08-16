@@ -18,18 +18,26 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const previousWithdrawTotalString = withdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
+    // step 5: 
+    const balanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotalElement.innerText;
+    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+    if (newWithdrawAmount > previousBalanceTotal) {
+        alert('Your balance is not sufficient please deposit new amount')
+        return;
+    }
+
     // step 4:
     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
 
     withdrawTotalElement.innerText = currentWithdrawTotal;
 
-    // step 5: 
-    const balanceTotalElement = document.getElementById('balance-total');
-    const previousBalanceTotalString = balanceTotalElement.innerText;
-    const previousBalanceTotal = parseFloat(previousBalanceTotalString);
+
+
 
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = newBalanceTotal;
+
 
 
     withdrawField.value = '';
